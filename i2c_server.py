@@ -1,5 +1,4 @@
 import time
-import board
 import busio
 import yaml
 import pry
@@ -23,3 +22,5 @@ while True:
     mqtt_cient.publish(sensor.data)
     sensor.print()
     time.sleep(3)
+
+#test1

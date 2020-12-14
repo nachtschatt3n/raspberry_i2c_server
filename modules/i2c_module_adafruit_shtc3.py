@@ -1,4 +1,5 @@
 class Shtc3:
+    import board
     import adafruit_shtc3
     def __init__(self, i2c):
       self.interface = self.adafruit_shtc3.SHTC3(i2c)

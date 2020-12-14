@@ -13,3 +13,6 @@ sudo apt install python3
 sudo apt install python3-pip
 pip3 install adafruit-circuitpython-lis3dh
 pip3 install paho.mqtt
+pip3 install pyyaml
+pip3 install pry
+pip3 install pry.py

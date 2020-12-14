@@ -1,4 +1,5 @@
 class Lps2x:
+    import board  
     import adafruit_lps2x
     def __init__(self, i2c):
       self.interface = self.adafruit_lps2x.LPS22(i2c)

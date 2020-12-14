@@ -1,4 +1,5 @@
 class Bh1750:
+    import board  
     import adafruit_bh1750
     def __init__(self, i2c):
       self.interface = self.adafruit_bh1750.BH1750(i2c)
