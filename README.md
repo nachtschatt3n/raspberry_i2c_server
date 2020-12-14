@@ -12,6 +12,9 @@ Requirements
 sudo apt install python3
 sudo apt install python3-pip
 pip3 install adafruit-circuitpython-lis3dh
+pip3 install adafruit-circuitpython-pct2075
+pip3 install adafruit-circuitpython-bh1750
+pip3 install adafruit-circuitpython-lps2x
 pip3 install paho.mqtt
 pip3 install pyyaml
 pip3 install pry
