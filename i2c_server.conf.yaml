@@ -8,3 +8,4 @@ modules:
     # - Pct2075
     # - Lps2x
     # - Bh1750
+log: true
