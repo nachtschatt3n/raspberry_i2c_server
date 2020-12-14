@@ -8,9 +8,7 @@ from modules import *
 
 from i2c_server_mqtt import *
 
-#with open("/etc/i2c_server/i2c_server.conf.yaml", "r") as ymlfile:
-
-with open("i2c_server.conf.yaml", "r") as ymlfile:
+with open("/etc/i2c_server/i2c_server.conf.yaml", "r") as ymlfile:
     cfg = yaml.load(ymlfile, Loader=yaml.FullLoader)
 
 i2c = busio.I2C(board.SCL, board.SDA)
