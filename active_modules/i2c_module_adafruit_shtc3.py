@@ -1,0 +1,1 @@
+../modules/i2c_module_adafruit_shtc3.py

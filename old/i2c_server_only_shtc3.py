@@ -26,9 +26,9 @@ while True:
     print("---------------------")
 
     print("Temperature: %0.1f C" % sht.temperature)
-    client.publish("raspberry_sensors/upstairs/temperature", sht.temperature)
+    client.publish("raspberry_sensors/upstairs/prusa_mini01/temperature", sht.temperature)
 
     print("Humidity: %0.1f %%fH" % sht.relative_humidity)
-    client.publish("raspberry_sensors/upstairs/humidity", sht.relative_humidity)
+    client.publish("raspberry_sensors/upstairs/prusa_mini01/humidity", sht.relative_humidity)
 
     time.sleep(3)

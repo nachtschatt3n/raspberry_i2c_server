@@ -1,0 +1,10 @@
+name: prusa_mini 
+room: upstairs
+mqtt:
+    host: 192.168.40.211
+    port: 1888
+modules:
+    - Shtc3
+    - Pct2075
+    - Lps2x
+    - Bh1750
