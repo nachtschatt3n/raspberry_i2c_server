@@ -16,9 +16,4 @@ class MqttClient:
             print("Unexpected disconnection.")
 
     def publish(sensor_data)
-      
-
-
- 
-
-
+        pry()

@@ -1,1 +1,0 @@
-../modules/i2c_module_adafruit_lps2x.py

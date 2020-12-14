@@ -1,9 +1,11 @@
 import time
 import board
 import busio
+import yaml
+import pry
 
-from .active_modules/* import *
-from i2c_server_mqtt import MqttClient
+from modules import *
+from i2c_server_mqtt import *
 
 with open("/etc/i2c_server/i2c_server.conf.yaml", "r") as ymlfile:
     cfg = yaml.load(ymlfile, Loader=yaml.FullLoader)
