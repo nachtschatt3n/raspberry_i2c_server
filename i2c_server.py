@@ -39,6 +39,7 @@ while True:
     mqtt_cient.publish(sensor.data())
     if cfg["log"] == "true":
       sensor.print()
-    display.text(sensor.print(), 0, 0, 1)
+    display.text(sensor.temperature(), 0, 0, 1)
+    display.text(sensor.humidity(), 0, 10, 1)
     display.show()
     time.sleep(3)

@@ -8,6 +8,16 @@ class Shtc3:
       print("Temperature: %.2f C" % self.interface.temperature)
       print("Humidity: %0.1f %%fH" % self.interface.relative_humidity)
 
+    def draw(self):
+      print("Temperature: %.2f C" % self.interface.temperature)
+      print("Humidity: %0.1f %%fH" % self.interface.relative_humidity)
+
+    def temperature(self):
+      return print("Temperature: %.2f C" % self.interface.temperature)
+      
+    def humidity(self):
+      print("Humidity: %0.1f %%fH" % self.interface.relative_humidity)
+
     def data(self):
       return {
         "temperature" : self.interface.temperature,
