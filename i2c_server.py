@@ -4,6 +4,7 @@ import board
 import busio
 import yaml
 import pry
+import adafruit_ssd1306
 
 from modules import *
 from i2c_server_mqtt import *
@@ -24,7 +25,9 @@ for sensor in cfg["modules"]:
     constructor = globals()[sensor]
     i2c_sensors[sensor.lower()] = constructor(i2c)
 
-display = Ssd1306(i2c)
+display = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c)
+display.fill(0)
+display.show()
 
 #init mqtt
 mqtt_cient = MqttClient(cfg["mqtt"])
