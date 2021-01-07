@@ -16,6 +16,7 @@ pip3 install adafruit-circuitpython-pct2075
 pip3 install adafruit-circuitpython-bh1750
 pip3 install adafruit-circuitpython-lps2x
 pip3 install adafruit-circuitpython-shtc3
+pip3 install adafruit-circuitpython-ssd1306
 pip3 install paho.mqtt
 pip3 install pyyaml
 pip3 install pry
