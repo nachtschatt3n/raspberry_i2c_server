@@ -24,7 +24,7 @@ for sensor in cfg["modules"]:
     constructor = globals()[sensor]
     i2c_sensors[sensor.lower()] = constructor(i2c)
 
-display = Shtc3(i2c)
+display = Ssd1306(i2c)
 
 #init mqtt
 mqtt_cient = MqttClient(cfg["mqtt"])
