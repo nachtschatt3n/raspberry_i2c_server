@@ -39,5 +39,5 @@ while True:
     mqtt_cient.publish(sensor.data())
     if cfg["log"] == "true":
       sensor.print()
-    display.draw('test')
+    display.text('Hello', 0, 0, 1)
     time.sleep(3)
