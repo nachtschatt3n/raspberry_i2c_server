@@ -4,10 +4,10 @@ mqtt:
     name: prusa_mini 
     room: upstairs
 sensors:
-    # - Shtc3
+    - Shtc3
     # - Pct2075
     # - Lps2x
     # - Bh1750
-display:
-
+displays:
+    - Ssd1306
 log: true

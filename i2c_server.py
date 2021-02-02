@@ -4,10 +4,10 @@ import board
 import busio
 import yaml
 import pry
-import adafruit_ssd1306
 
-from modules import *
-from i2c_server_mqtt import *
+from sensors import *
+from displays import * 
+from mqtt_client import *
 
 # set logging to var log
 log_file = open("/var/log/i2c_server.log","w")
@@ -20,14 +20,17 @@ with open("/etc/i2c_server/i2c_server.conf.yaml", "r") as ymlfile:
 # init i2c 
 i2c = busio.I2C(board.SCL, board.SDA)
 i2c_sensors = {}
+i2c_displays ={}
 
-for sensor in cfg["modules"]:
+#load the sensor modules
+for sensor in cfg["sensors"]:
     constructor = globals()[sensor]
     i2c_sensors[sensor.lower()] = constructor(i2c)
 
-display = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c)
-display.fill(0)
-display.show()
+#init displays
+for display in cfg["displays"]:
+    constructor = globals()[display]
+    i2c_displays[sensor.lower()] = constructor(i2c)
 
 #init mqtt
 mqtt_cient = MqttClient(cfg["mqtt"])
@@ -37,9 +40,8 @@ while True:
   for i2c_sensor in i2c_sensors:
     sensor = i2c_sensors[i2c_sensor]
     mqtt_cient.publish(sensor.data())
-    if cfg["log"] == "true":
-      sensor.print()
-    display.text(sensor.temperature(), 0, 0, 1)
-    display.text(sensor.humidity(), 0, 10, 1)
-    display.show()
+    #if cfg["log"] == "true":
+      #sensor.print()
+    for i2c_display in i2c_displays:
+      i2c_display.draw()
     time.sleep(3)

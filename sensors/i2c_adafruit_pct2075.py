@@ -7,6 +7,9 @@ class Pct2075:
     def print(self):
       print("Temperature: %.2f C" % self.interface.temperature)
 
+    def temperature(self):
+      return "Temperature: %.2f C" % self.interface.temperature
+
     def data(self):
       return {
         "temperature" : self.interface.temperature

@@ -8,6 +8,12 @@ class Lps2x:
       print("Temperature: %.2f C" % self.interface.temperature)
       print("Pressure: %.2f hPa" % self.interface.pressure)
 
+    def temperature(self):
+      return "Temperature: %.2f C" % self.interface.temperature
+
+    def pressure(self):
+      return "Pressure: %.2f hPa" % self.interface.pressure
+
     def data(self):
       return {
         "temperature" : self.interface.temperature,

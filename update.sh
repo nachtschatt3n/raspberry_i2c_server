@@ -1,5 +1,3 @@
-# Updater
-
 #make sure the service is stopped
 sudo service i2c_server stop
 

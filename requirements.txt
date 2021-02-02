@@ -1,0 +1,14 @@
+board
+Adafruit_Blinka
+paho.mqtt
+pyyaml
+pry.py
+adafruit-circuitpython-lis3dh
+adafruit-circuitpython-pct2075
+adafruit-circuitpython-bh1750
+adafruit-circuitpython-lps2x
+adafruit-circuitpython-shtc3
+adafruit-circuitpython-ssd1306
+adafruit-circuitpython-bh1750
+adafruit-circuitpython-bme280
+adafruit-circuitpython-ssd1306

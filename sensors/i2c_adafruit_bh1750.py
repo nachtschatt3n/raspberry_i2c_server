@@ -7,6 +7,9 @@ class Bh1750:
     def print(self):
       print("%.2f Lux" % self.interface.lux)
 
+    def lux(self):
+      return "%.2f Lux" % self.interface.lux
+
     def data(self):
       return {
         "lux" : self.interface.lux,
